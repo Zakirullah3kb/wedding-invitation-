@@ -206,7 +206,7 @@
         
         .whatsapp-button {
             --glow-color: #25D366;
-            background: linear-gradient(135deg, 
+            background: linear-gradient(135deg, typ 
                 rgba(37, 211, 102, 0.7), 
                 rgba(18, 140, 126, 0.7));
         }
@@ -687,7 +687,7 @@
         
         .toggle-mini-btn {
             position: absolute;
-            top: 10px;
+            top: 5px;
             right: 10px;
             width: 24px;
             height: 24px;
@@ -696,6 +696,7 @@
             color: var(--player-text);
             display: flex;
             align-items: center;
+            text-align: center;
             justify-content: center;
             cursor: pointer;
             font-size: 12px;
@@ -949,7 +950,7 @@
         }
         
         .watermark:hover {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(248, 243, 243, 0.8);
         }
         
         /* Adjust watermark position when music player is visible */
@@ -1510,7 +1511,7 @@
             <h1 class="intro-title">شادی کا دعوت</h1>
             <div class="intro-decoration"></div>
             <h2 class="intro-subtitle">انجینئر آدم خان ولد حاجی ہارون خان</h2>
-            <p class="intro-date">۵ اپریل ۲۰۲۵</p>
+            <p class="intro-date">5 اپریل 2025</p>
         </div>
         <div class="intro-loader">
             <div class="intro-loader-progress"></div>
@@ -1522,9 +1523,11 @@
     
     <div class="card animate__animated animate__fadeIn">
         <h1 class="animate__animated animate__fadeInDown">انجینئر آدم خان ولد حاجی ہارون خان</h1>
-        <p class="details animate__animated animate__fadeIn animate__delay-1s">شادی کی تقریب میں آپ کی شرکت ہمارے لئے باعثِ عزت ہوگی۔</p>
-        <p class="details animate__animated animate__fadeIn animate__delay-1s"><strong>شادی کی تاریخ:</strong> ۵ اپریل ۲۰۲۵</p>
-        <p class="details animate__animated animate__fadeIn animate__delay-1s"><strong>وقت:</strong> دوپہر ۲ بجے</p>
+        <p class="details animate__animated animate__fadeIn animate__delay-1s">خوشیوں کے اس خوبصورت موقع پر آپ کی آمد ہمارے لیے سب سے قیمتی تحفہ ہوگی!" 🎊💖
+
+        </p>
+        <p class="details animate__animated animate__fadeIn animate__delay-1s"><strong>شادی کی تاریخ:</strong> 5 اپریل 2025</p>
+        <p class="details animate__animated animate__fadeIn animate__delay-1s"><strong>وقت:</strong>9:00 AM سے 1:00 PM تک" ⏰</p>
         <p class="details animate__animated animate__fadeIn animate__delay-1s"><strong>مقام:</strong> سوگیا کلی، تحصیل تنگی، ضلع چارسدہ</p>
         <p class="countdown animate__animated animate__fadeIn animate__delay-2s" id="countdown"></p>
         <div class="button-container animate__animated animate__fadeIn animate__delay-2s">
@@ -1533,7 +1536,7 @@
                 <i class="fab fa-whatsapp"></i>
                 <span>واٹس ایپ</span>
             </a>
-            <a class="btn location-button" href="https://www.google.com/maps/search/?api=1&query=Sogia+Killi+Tehsil+Tangi+District+Charsadda" target="_blank" style="width: 48%;">
+            <a class="btn location-button" href="https://www.google.com/maps/search/?api=1&query=34.2925,71.6619" target="_blank" style="width: 48%;">
                 <div class="btn-glow"></div>
                 <i class="fas fa-map-marker-alt"></i>
                 <span>مقام دیکھیں</span>
@@ -1605,7 +1608,7 @@
                 <button class="player-btn" id="backwardBtn" data-tooltip="10 سیکنڈ پیچھے">
                     <i class="fas fa-backward"></i>
                 </button>
-                <button class="player-btn play-pause" id="playPauseBtn" data-tooltip="پلے/پاز">
+                <button class="player-btn play-pause" id="playPauseBtn">
                     <i class="fas fa-play" id="playPauseIcon"></i>
                 </button>
                 <button class="player-btn" id="forwardBtn" data-tooltip="10 سیکنڈ آگے">
@@ -1733,14 +1736,46 @@
             
             // Music list using actual MP3 files in the directory
             const songs = [
-                { title: "آدم خان 1", artist: "شادی کی خوشی", src: "adam khan (1).mp3", duration: "Unknown" },
-                { title: "آدم خان 2", artist: "شادی کی خوشی", src: "adam khan (2).mp3", duration: "Unknown" },
-                { title: "آدم خان 3", artist: "شادی کی خوشی", src: "adam khan.mp3", duration: "Unknown" }
+                { title: "شادی کا گیت ١", artist: "شادی کی خوشی", src: "song/shadi song (1).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٢", artist: "شادی کی خوشی", src: "song/shadi song (2).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٣", artist: "شادی کی خوشی", src: "song/shadi song (3).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٤", artist: "شادی کی خوشی", src: "song/shadi song (4).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٥", artist: "شادی کی خوشی", src: "song/shadi song (5).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٦", artist: "شادی کی خوشی", src: "song/shadi song (6).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٧", artist: "شادی کی خوشی", src: "song/shadi song (7).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٨", artist: "شادی کی خوشی", src: "song/shadi song (8).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ٩", artist: "شادی کی خوشی", src: "song/shadi song (9).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ١٠", artist: "شادی کی خوشی", src: "song/shadi song (10).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ١١", artist: "شادی کی خوشی", src: "song/shadi song (11).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ١٢", artist: "شادی کی خوشی", src: "song/shadi song (12).mp3", duration: "Unknown" },
+                { title: "شادی کا گیت ١٣", artist: "شادی کی خوشی", src: "song/shadi song (13).mp3", duration: "Unknown" }
             ];
             
-            // Create audio element
+            // Create audio element with improved error handling
             const audio = new Audio();
             audio.preload = "auto";
+            
+            // Add error handling for audio element
+            audio.addEventListener('error', function(e) {
+                console.error('Audio error:', e);
+                // Try to recover by moving to next song
+                setTimeout(() => {
+                    nextSong();
+                }, 2000);
+            });
+            
+            // Add canplaythrough event to ensure audio is ready
+            audio.addEventListener('canplaythrough', function() {
+                console.log('Audio is ready to play');
+                // Update duration if available
+                if (!isNaN(audio.duration)) {
+                    const durationMin = Math.floor(audio.duration / 60);
+                    const durationSec = Math.floor(audio.duration % 60);
+                    const formattedDuration = `${durationMin}:${durationSec < 10 ? '0' : ''}${durationSec}`;
+                    songs[currentSongIndex].duration = formattedDuration;
+                    totalTime.textContent = formattedDuration;
+                }
+            });
             
             let currentSongIndex = 0;
             let isPlaying = false;
@@ -1784,14 +1819,28 @@
                 });
             }
             
-            // Load song
+            // Load song with improved error handling
             function loadSong() {
                 const song = songs[currentSongIndex];
                 songTitle.textContent = song.title;
                 songArtist.textContent = song.artist;
-                audio.src = song.src;
+                
+                // Reset audio source
+                audio.src = '';
                 audio.load();
-                updatePlaylistHighlight();
+                
+                // Set new source with error handling
+                try {
+                    audio.src = song.src;
+                    audio.load();
+                    updatePlaylistHighlight();
+                } catch (error) {
+                    console.error('Error loading song:', error);
+                    // Try to recover by moving to next song
+                    setTimeout(() => {
+                        nextSong();
+                    }, 2000);
+                }
             }
             
             // Play song with improved error handling
@@ -1816,23 +1865,29 @@
                     return;
                 };
                 
-                audio.play().catch(e => {
-                    console.error("Audio playback failed:", e);
-                    
-                    // More specific error messages based on error type
-                    if (e.name === 'NotAllowedError') {
-                        // Handle autoplay restrictions
-                        alert("آٹوپلے کی اجازت نہیں ہے - موسیقی چلانے کے لیے براہ کرم پلے بٹن پر کلک کریں");
-                    } else if (e.name === 'NotSupportedError') {
-                        alert("آڈیو فارمیٹ سپورٹ نہیں ہے");
-                    } else {
-                        alert("موسیقی چلانے میں دشواری - دوبارہ کوشش کریں");
-                    }
-                });
+                // Try to play with error handling
+                const playPromise = audio.play();
                 
-                isPlaying = true;
-                playPauseIcon.classList.remove('fa-play');
-                playPauseIcon.classList.add('fa-pause');
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        isPlaying = true;
+                        playPauseIcon.classList.remove('fa-play');
+                        playPauseIcon.classList.add('fa-pause');
+                        toggleVisualizer(true);
+                    }).catch(e => {
+                        console.error("Audio playback failed:", e);
+                        
+                        // More specific error messages based on error type
+                        if (e.name === 'NotAllowedError') {
+                            // Handle autoplay restrictions
+                            alert("آٹوپلے کی اجازت نہیں ہے - موسیقی چلانے کے لیے براہ کرم پلے بٹن پر کلک کریں");
+                        } else if (e.name === 'NotSupportedError') {
+                            alert("آڈیو فارمیٹ سپورٹ نہیں ہے");
+                        } else {
+                            alert("موسیقی چلانے میں دشواری - دوبارہ کوشش کریں");
+                        }
+                    });
+                }
             }
             
             // Pause song
@@ -2131,8 +2186,8 @@
             updateCountdown();
             
             // WhatsApp Link Update with proper country code format
-            const message = encodeURIComponent("السلام علیکم! آپ کو شادی کی دعوت دی جاتی ہے۔ تاریخ: ۵ اپریل، مقام: سوگیا کلی۔ برائے مہربانی شرکت کریں!");
-            document.getElementById("whatsappLink").href = `https://wa.me/923439179353?text=${message}`;
+            const message = encodeURIComponent("Assalamualaikum Adam Khan, InshaAllah, we will definitely come to your wedding. May Allah fill your life with happiness and blessings. 🤲");
+            document.getElementById("whatsappLink").href = `https://wa.me/14379812390?text=${message}`;
             
             // Mobile detection and responsive adjustments
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
